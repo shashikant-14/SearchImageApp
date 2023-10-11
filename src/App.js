@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchImage from "./component/searchImage/searchImage";
+import { searchImages } from "./API/searchAPI";
+import ImageList from "./component/ImageList/ImageList";
 
-function App(){
+function App() {
+  const [images, setImages] = useState([]);
 
-  function handleSearch(query){
-    console.log(query);
+  async function handleSearch(query) {
+    const result = await searchImages(query);
+    console.log(result);
+    result?.length && setImages(result);
   }
 
-  return(
-    <div>
-      <SearchImage onSearch = {handleSearch}/>
-    </div>
+  return (
+    <>
+      <SearchImage onSearch={handleSearch} />
+      <ImageList Images={images} />
+    </>
   )
 
 }

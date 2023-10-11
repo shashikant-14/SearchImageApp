@@ -5,11 +5,12 @@ const SearchImage = ({onSearch}) => {
     const handleInput = (e) =>{
         console.log("fgfdgd");
         setInput(e.target.value);
+        //setInput(e.target.value.replace(/[a-z]/,''));
     }
     
     const handleSubmit = (e) =>{
         e.preventDefault();
-        onSearch(input);
+        input && onSearch(input);
     }
 
     return(
