@@ -1,22 +1,26 @@
 import React, { useState } from "react";
+import './searchImage.css'
 
-const SearchImage = ({onSearch}) => {
+const SearchImage = ({ onSearch }) => {
     const [input, setInput] = useState('');
-    const handleInput = (e) =>{
+    const handleInput = (e) => {
         console.log("fgfdgd");
         setInput(e.target.value);
         //setInput(e.target.value.replace(/[a-z]/,''));
     }
-    
-    const handleSubmit = (e) =>{
+
+    const handleSubmit = (e) => {
         e.preventDefault();
         input && onSearch(input);
     }
 
-    return(
-        <form onSubmit={handleSubmit}> 
-        <input type="text" value={input} onChange={handleInput}/>
-        </form>
+    return (
+        <div className="searchBar">
+            <form onSubmit={handleSubmit}>
+                <label>Search for the Image</label>
+                <input type="text" value={input} onChange={handleInput} />
+            </form>
+        </div>
     )
 }
 

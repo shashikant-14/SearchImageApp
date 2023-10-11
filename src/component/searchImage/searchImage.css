@@ -1,0 +1,18 @@
+.searchBar{
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    min-width: 200px;
+    
+}
+
+.searchBar form input{
+    width: 100%;
+}
+
+form label{
+    font-weight: bold;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-
+import './ImageShow.css';
 
 const ImageShow = ({Image}) =>{
     return(

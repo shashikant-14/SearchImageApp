@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchImage from "./component/searchImage/searchImage";
 import { searchImages } from "./API/searchAPI";
 import ImageList from "./component/ImageList/ImageList";
+import './App.css'
 
 function App() {
   const [images, setImages] = useState([]);
@@ -13,10 +14,10 @@ function App() {
   }
 
   return (
-    <>
+    <div className="appContainer">
       <SearchImage onSearch={handleSearch} />
       <ImageList Images={images} />
-    </>
+    </div>
   )
 
 }

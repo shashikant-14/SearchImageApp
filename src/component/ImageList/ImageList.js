@@ -1,5 +1,6 @@
 import React from "react";
 import ImageShow from "../ImageShow/ImageShow";
+import './ImageList.css'
 
 const ImageList = ({ Images }) => {
 
@@ -10,7 +11,7 @@ const ImageList = ({ Images }) => {
     ));
 
     return (
-        <div>
+        <div className="listWrapper">
             {resultImage}
         </div>
     )
