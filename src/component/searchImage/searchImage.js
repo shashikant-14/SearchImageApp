@@ -12,7 +12,7 @@ const SearchImage = ({ onSearch }) => {
     return (
         <div className="searchBar">
             <form onSubmit={handleSubmit}>
-                <input ref={SearchRef} type="text" placeholder="Type Something to search ..." />
+                <input id="searchInput" ref={SearchRef} type="text" placeholder="Type Something to search ..." />
             </form>
         </div>
     )
