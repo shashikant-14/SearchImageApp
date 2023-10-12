@@ -17,8 +17,7 @@ const SearchImage = ({ onSearch }) => {
     return (
         <div className="searchBar">
             <form onSubmit={handleSubmit}>
-                <label>Search for the Image</label>
-                <input type="text" value={input} onChange={handleInput} />
+                <input type="text" value={input} onChange={handleInput} placeholder="Enter image name here" />
             </form>
         </div>
     )

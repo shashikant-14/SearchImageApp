@@ -1,6 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    font-size: 14px;
 }
 .appContainer{
     display: flex;
@@ -10,3 +11,20 @@
     height: 100dvh;
     padding: 20px;
 }
+
+.appContainer h1:first-of-type{
+    color: red;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+@media (max-width:600px){
+    *{
+        font-size: 10px;
+    }
+}
+ @media (max-width:300px){
+    *{
+        font-size: 8px;
+    }
+ }

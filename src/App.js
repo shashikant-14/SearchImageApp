@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="appContainer">
+      <h1>Image Search App</h1>
       <SearchImage onSearch={handleSearch} />
       <ImageList Images={images} />
     </div>

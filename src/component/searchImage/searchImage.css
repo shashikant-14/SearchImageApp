@@ -1,16 +1,23 @@
 .searchBar{
-    border: 1px solid gray;
-    border-radius: 10px;
-    box-sizing: border-box;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
-    width: 30%;
-    min-width: 200px;
+    width: 100%;
+    max-width: 400px;
     
 }
 
 .searchBar form input{
+    padding: 5px 10px;
     width: 100%;
+    font-size: .8em;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px rgb(116, 81, 18);
+    height: 20px;
+}
+
+.searchBar form input:focus{
+    outline: none;
 }
 
 form label{
