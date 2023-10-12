@@ -4,6 +4,18 @@ import { searchImages } from "./API/searchAPI";
 import ImageList from "./component/ImageList/ImageList";
 import './App.css'
 
+const debounce = (CBF,delay = 500)=>{
+  let timer = null;
+  return function (...params){
+      
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+          CBF.apply(this,params);
+      }, delay);
+
+  }
+}
+
 function App() {
   const [images, setImages] = useState([]);
 
@@ -13,10 +25,12 @@ function App() {
     result?.length && setImages(result);
   }
 
+  const debounceCall = debounce(handleSearch,500);
+
   return (
     <div className="appContainer">
       <h1>Image Search App</h1>
-      <SearchImage onSearch={handleSearch} />
+      <SearchImage onSearch={debounceCall} />
       <ImageList Images={images} />
     </div>
   )
